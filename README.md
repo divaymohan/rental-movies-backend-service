@@ -189,8 +189,8 @@ localhost:3000/api/movies/rental/(id)
 Response:- 
 
 {
-        customerName: "kiran",
-        pay: 345
+        "customerName": "kiran",
+        "pay": 345
 }
 ```
 * ### Add new Rental(Post Request) :- 
