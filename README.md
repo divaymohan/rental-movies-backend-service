@@ -31,7 +31,7 @@
 ## Requests:
 ```
 Note:-
-1. All the content inside `(` `)` is passed as parameters.
+1. All the content inside '( )' is passed as parameters.
 
 2. If we pass an id in body then that id should be present in database.
 ```
