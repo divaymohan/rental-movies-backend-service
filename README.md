@@ -29,7 +29,12 @@
 * if it shows message like listening at 3000 then API is ready to use.
 
 ## Requests:
-All the content inside `(` `)` is passed as parameters.
+```
+Note:-
+1. All the content inside `(` `)` is passed as parameters.
+
+2. If we pass an id in body then that id should be present in database.
+```
 ## 1. Genre Handler :
 * ### Get all the generes in the store (Get Request):-
 ```
@@ -83,19 +88,19 @@ End Point:-
 
 localhost:3000/api/movies/movies
 ```
-* ### Get one choosen movie from store using its id(Ger Request):-
+* ### Get one choosen movie from store using its id(Get Request):-
 ```
 End Point:- 
 
 localhost:3000/api/movies/movies/(id)
 ``` 
-* ### Delete one movie from store :-
+* ### Delete one movie from store (Delete Request):-
 ```
 End Point:- 
 
 localhost:3000/api/movies/movies/(id)
 ```
-* ### Add new movie in store:- 
+* ### Add new movie in store (Post Request):- 
 ```
 End Point:-  
 
@@ -109,19 +114,99 @@ Body:-
        "genreId":"5eca8ae1e6f04a2db0a83cde",
        "numberInStock": 45,
        "dailyRantalRate": 25
- }
+}
 ```
 ## 3. Customer Handler :
-* ### Get all the list of customers:-
-* ### Get one customer by its id:- 
-* ### Remove one customer from history:-
-* ### Add new customer to the store:-
+* ### Get all the list of customers(Get Request):-
+```
+End Point:- 
 
+localhost:3000/api/movies/customers
+```
+* ### Get one customer by its id(Get Request):-
+```
+End Point:- 
+
+localhost:3000/api/movies/customers/(id)
+```
+* ### Remove one customer from history (Delete Request):-
+```
+End Point:- 
+
+localhost:3000/api/movies/customers/(id)
+```
+* ### Add new customer to the store(Post Request):-
+```
+End Point:- 
+
+localhost:3000/api/movies/customers
+```
+```json
+Body:- 
+{
+       "name": "divay",
+       "contactNumber": 8149958193,
+       "isGold": true
+}
+```
+* ### Update already exist customer(Put Request):-
+```
+End Point :- 
+
+localhost:3000/api/movies/customers/(id)
+```
+
+```json
+Body (isGold option is optional):-
+{
+       "name": "divay",
+       "contactNumber": 8149958193,
+       "isGold": true
+}
+
+```
 ## 4. Rental Handler :
-* ### Get the list of all current rental:- 
-* ### Get one perticular rental from current rentals:-
-* ### Delete One Rental:-
-* ### Add new Rental:- 
-   
+* ### Get the list of all current rental(Get Request):-
+```
+End Point :-
+
+localhost:3000/api/movies/rental/
+```
+
+* ### Get one perticular rental from current rentals(Get Request):-
+```
+End Point:- 
+
+localhost:3000/api/movies/rental/(id)
+```
+* ### Delete One Rental(Delete Request):-
+```
+End Point:- 
+
+localhost:3000/api/movies/rental/(id)
+```
+```json
+Response:- 
+
+{
+        customerName: "kiran",
+        pay: 345
+}
+```
+* ### Add new Rental(Post Request) :- 
+```
+End Point:-
+
+localhost:3000/api/movies/rental
+
+```
+```json
+Body:-
+{
+       "customerId": "5ecb46bfe52ba336d818bc8d",
+       "movieId": "5eca93dee7bf1e251caeae54",
+       "rentalRate": 200
+}
+```
 
 
