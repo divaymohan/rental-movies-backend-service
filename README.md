@@ -64,7 +64,7 @@ Body:-
 }
 ``` 
 
-* ### Add new genre in the store(post request):- 
+* ### Add new genre in the store(Post request):- 
 ```
 End Point:- 
 
@@ -77,11 +77,40 @@ Body:-
 }
 ```
 ## 2. Movie Handler :
-* ### Get all the movies from store:-
-* ### Get one choosen movie from store using its id:- 
+* ### Get all the movies from store(Get request) :-
+```
+End Point:- 
+
+localhost:3000/api/movies/movies
+```
+* ### Get one choosen movie from store using its id(Ger Request):-
+```
+End Point:- 
+
+localhost:3000/api/movies/movies/(id)
+``` 
 * ### Delete one movie from store :-
-* ### Update one movie in store:-
-* ### Add new movie in store:-   
+```
+End Point:- 
+
+localhost:3000/api/movies/movies/(id)
+```
+* ### Add new movie in store:- 
+```
+End Point:-  
+
+localhost:3000/api/movies/movies
+```  
+```json
+Body:-
+
+{
+       "title":"Ghost",
+       "genreId":"5eca8ae1e6f04a2db0a83cde",
+       "numberInStock": 45,
+       "dailyRantalRate": 25
+ }
+```
 ## 3. Customer Handler :
 * ### Get all the list of customers:-
 * ### Get one customer by its id:- 
